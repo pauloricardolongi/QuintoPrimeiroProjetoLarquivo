@@ -8,11 +8,11 @@ public class Programa {
 
 	public static void main(String[] args) {
 		
-		String [] linhas = new String[] {"Good morgin", "Good afterman", "Good night"};
+		String [] linhas = new String[] {"Good morgin", "Good afterman", "Good night", "Paulo"};
 		
 		String path = "c:\\circular\\out.txt";
 		
-		try(BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))){
 			for(String linha : linhas) {
 				bw.write(linha);
 				bw.newLine();
