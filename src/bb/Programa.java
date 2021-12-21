@@ -23,6 +23,8 @@ public class Programa {
 		for(File file : files) {
 			System.out.println(file);
 		}
+		boolean sucesso = new File(strPath + "\\subdividir").mkdir();
+		System.out.println("Diretório criado com sucesso: " + sucesso);
 		sc.close();
 		
 	}
