@@ -1,26 +1,24 @@
 package bb;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.File;
+import java.util.Scanner;
 
 public class Programa {
 
 	public static void main(String[] args) {
 		
-		String [] linhas = new String[] {"Good morgin", "Good afterman", "Good night", "Paulo"};
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Entre com folder path: ");
+		String strPath = sc.nextLine();
 		
-		String path = "c:\\circular\\out.txt";
+		File path = new File(strPath);
 		
-		try(BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))){
-			for(String linha : linhas) {
-				bw.write(linha);
-				bw.newLine();
-			}
+		File[] folders = path.listFiles(File::isDirectory);
+		System.out.println("FOLDER:");
+		for (File folder : folders) {
+			System.out.println(folder);
 		}
-		catch(IOException e) {
-			e.printStackTrace();
-		}
+		sc.close();
 		
 	}
 
