@@ -18,6 +18,11 @@ public class Programa {
 		for (File folder : folders) {
 			System.out.println(folder);
 		}
+		File[] files = path.listFiles(File:: isFile);
+		System.out.println(" FILES");
+		for(File file : files) {
+			System.out.println(file);
+		}
 		sc.close();
 		
 	}
