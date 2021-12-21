@@ -12,9 +12,12 @@ public class Programa {
 		System.out.println("Entre com file path: ");
 		String strPath = sc.nextLine();
 		File path = new File(strPath);
-	//acessar  somente o nome do arquivo
-		
+	//acessar  somente o nome do arquivo		
 		System.out.println("getNome: "+ path.getName());
+		//acessar o caminho do arquivo
+		System.out.println("getParent: "+ path.getParent());
+		//todo o caminho
+		System.out.println("getPath "+ path.getPath());
 		
 		sc.close();
 		
